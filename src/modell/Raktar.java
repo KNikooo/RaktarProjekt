@@ -1,15 +1,18 @@
 package modell;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class Raktar implements Iterable<Elelmiszer>{
-    ArrayList<Elelmiszer> elelmiszerLista;
+public class Raktar implements Iterable<Elelmiszer>, Serializable{
+    private ArrayList<Elelmiszer> elelmiszerLista;
 
-    public Raktar(ArrayList<Elelmiszer> elelmiszerLista) {
+    public Raktar() {
         this.elelmiszerLista = new ArrayList<>();
+        
+       
     }
     
     public void felvesz(Elelmiszer elelmiszer){

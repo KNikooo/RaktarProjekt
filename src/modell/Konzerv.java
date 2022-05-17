@@ -17,6 +17,17 @@ public class Konzerv extends Elelmiszer{
         super(nev, gyarto, lejaratiDatum);
         this.leiras = leiras;
     }
+
+    public Konzerv(String leiras, File ajanlas, String nev, String gyarto) throws HibasDatumException {
+        super(nev, gyarto);
+        this.leiras = leiras;
+        this.ajanlas = ajanlas;
+    }
+
+    public Konzerv(String leiras, String nev, String gyarto) throws HibasDatumException {
+        super(nev, gyarto);
+        this.leiras = leiras;
+    }
     
     public void receptetMutat(){
         if(ajanlas.exists()){
